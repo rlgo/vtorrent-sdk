@@ -1,11 +1,11 @@
-enum TorrentStatus {
-  downloading = 'downloading',
-  seeding = 'seeding',
-  paused = 'paused',
-  queued = 'queued',
-  checking = 'checking',
-  error = 'error',
-  unknown = 'unknown',
+export enum TorrentStatus {
+  Downloading = 'Downloading',
+  Seeding = 'Seeding',
+  Paused = 'Paused',
+  Queued = 'Queued',
+  Checking = 'Checking',
+  Error = 'Error',
+  Unknown = 'Unknown',
 }
 
 export interface Torrent {
@@ -20,7 +20,7 @@ export interface Torrent {
   category?: string;
   uploadSpeed: number;
   downloadSpeed: number;
-  eta: number;
+  eta: number | null;
   connectedPeers: number;
   totalPeers: number;
   connectedSeeds: number;
