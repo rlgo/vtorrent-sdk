@@ -2,12 +2,11 @@ import {
   AddTorrentOptions,
   TorrentClient,
   TorrentConfig,
-} from '../common/client';
-import { Torrent } from '../common/torrent';
+} from '../common/TorrentClient';
+import { Torrent } from '../common/Torrent';
 
 export class Qbittorrent implements TorrentClient {
   config: TorrentConfig;
-  connected = false;
 
   constructor(config: TorrentConfig) {
     this.config = config;

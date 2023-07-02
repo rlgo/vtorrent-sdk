@@ -1,8 +1,7 @@
-import { Torrent } from './torrent';
+import { Torrent } from './Torrent';
 
 export interface TorrentClient {
   config: TorrentConfig;
-  connected: boolean;
   login: () => Promise<void>;
   logout: () => Promise<void>;
   getTorrent: (id: string) => Promise<Torrent>;
